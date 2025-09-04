@@ -9,14 +9,13 @@ public class WordFrequencyGame {
         String[] words = inputStr.split(ANY_SPACE_SEPARATOR);
         if (words.length == 1) {
             return inputStr + " 1";
-        } else {
-            try {
-                List<WordFrequency> frequencies = countFrequencies(words);
-                frequencies.sort((w1, w2) -> w2.count() - w1.count());
-                return composeOutput(frequencies);
-            } catch (Exception e) {
-                return "Calculate Error";
-            }
+        }
+        try {
+            List<WordFrequency> frequencies = countFrequencies(words);
+            frequencies.sort((w1, w2) -> w2.count() - w1.count());
+            return composeOutput(frequencies);
+        } catch (Exception e) {
+            return "Calculate Error";
         }
     }
 
