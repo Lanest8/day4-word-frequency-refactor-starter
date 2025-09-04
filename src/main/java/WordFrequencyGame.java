@@ -12,9 +12,7 @@ public class WordFrequencyGame {
         } else {
             try {
                 List<Input> frequencies = countFrequencies(words);
-
                 frequencies.sort((w1, w2) -> w2.count() - w1.count());
-
                 return composeOutput(frequencies);
             } catch (Exception e) {
                 return "Calculate Error";
